@@ -9,7 +9,7 @@ DECLARE @tablename SYSNAME,
 		@NewTableDDlScript NVARCHAR(max),
 		@newTableName NVARCHAR(max);
        
-INSERT INTO @SmicaTables SELECT name FROM SMICADB.sys.tables WHERE type = 'U' AND name NOT IN ('__EFMigrationsHistory', 'Mailings') --AND name = 'AnswerOptionIndicators' --add mailing tables;
+INSERT INTO @SmicaTables SELECT name FROM SMICADB.sys.tables WHERE type = 'U' AND name NOT IN ('__EFMigrationsHistory', 'Mailings')  --add tables that are not needed in Audit db.
 
 DECLARE cur CURSOR 
 FOR SELECT name FROM @SmicaTables

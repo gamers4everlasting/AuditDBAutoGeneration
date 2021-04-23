@@ -1,4 +1,4 @@
---CREATE A PROCEDURE --use SMICADB;
+--CREATE A PROCEDURE --use maindatabase; (executes in the main database)
 CREATE OR ALTER PROCEDURE [dbo].[Sp_getTableDDL] @TBL VARCHAR(255), @outputDDlScript NVARCHAR(max) OUTPUT
 AS 
   BEGIN 

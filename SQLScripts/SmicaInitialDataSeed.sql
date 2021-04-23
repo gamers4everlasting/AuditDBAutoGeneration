@@ -1,1 +1,0 @@
---smica initial data seeds
